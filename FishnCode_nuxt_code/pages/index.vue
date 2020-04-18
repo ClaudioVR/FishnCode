@@ -175,17 +175,18 @@
         <v-container fill-height>
           <v-row class="mx-auto">
             <v-col
-              v-for="[value, title] of languages"
+              v-for="[value, title, logo] of languages"
               :key="title"
               cols="12"
               md="3"
+              class="d-flex flex-column align-center"
             >
+              <img class="mb-5" height="60" width="60" :src="logo" :alt="value">
               <div class="text-center">
                 <div
                   class="display-3 font-weight-black mb-4"
                   v-text="value"
                 ></div>
-
                 <div
                   class="title font-weight-regular text-uppercase"
                   v-text="title"
@@ -358,25 +359,25 @@ export default {
         services: [
           {
             icon: 'mdi-xml',
-            title: 'Clean code',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam',
+            title: 'Low code, no code',
+            text: 'Smart use of reusable components allows us to do more with less. More time to focus on your business logic, and on how to get the best out of the applications we build.',
           },
           {
             icon: 'mdi-account-circle-outline',
             title: 'UX Design',
-            text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.',
+            text: 'Users and user experience are at the very core of everything we do. Human centred design is paramount to providing the best possible digital solutions and applications that solve user requirements.',
           },
           {
             icon: 'mdi-telescope',
             title: 'Innovative technologies',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam',
+            text: 'We employ the very latest Javascript frameworks and libraries, and we are always on the lookout for the latest advances in web technologies in order to provide the best tools on the market.',
           },
         ],
         languages: [
-          ['Javascript', 'CSS3 HTML5'],
-          ['Vue.js', 'Nuxt.js, Vuetify'],
-          ['Amplify', 'Amazon Web Services'],
-          ['UI/UX', 'UXQB Certified']
+          ['Javascript', 'CSS3 - HTML5', '/javascript_logo.png'],
+          ['Vue.js', 'Nuxt.js - Vuetify', 'vue_logo.svg'],
+          ['Amplify', 'Amazon Web Services', 'amplify-logo.png'],
+          ['UI/UX', 'UXQB Certified', 'adobexd_logo.svg']
         ],
     }
   },
