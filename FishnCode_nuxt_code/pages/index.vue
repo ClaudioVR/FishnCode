@@ -12,43 +12,44 @@
         >
         <!-- Dark oslo Yk0tCHUm1-o -->
 
-        <v-container fill-height>
+        <v-container fill-height class="px-0">
           <v-row
             align="center"
             class="white--text mx-auto"
             justify="center"
           >
             <v-col
-              class="white--text text-center"
+              class="white--text text-center pa-0"
               cols="12"
-              tag="h1"
             >
-              <span
+              <!-- <span
                 :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
                 class="font-weight-black"
               >
                 Fish n Code
-              </span>
+              </span> -->
 
-              <br>
+              <v-img id="logo" class="pa-0" src="/fishncodelogo.svg">
 
+              </v-img>
               <span
+                id="location-text"
                 class="font-weight-light"
                 :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
               >
                 Oslo, Norway
               </span>
+              <br>
+              <v-btn
+                class="align-self-end"
+                fab
+                outlined
+                @click="$vuetify.goTo('#about-me')"
+              >
+                <v-icon>mdi-chevron-double-down</v-icon>
+              </v-btn>
 
             </v-col>
-
-            <v-btn
-              class="align-self-end"
-              fab
-              outlined
-              @click="$vuetify.goTo('#about-me')"
-            >
-              <v-icon>mdi-chevron-double-down</v-icon>
-            </v-btn>
           </v-row>
         </v-container>
         </v-img>
@@ -253,7 +254,7 @@
       <div class="py-12"></div>
 
       <v-container>
-        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Contact Me</h2>
+        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Contact Us</h2>
 
         <v-responsive
           class="mx-auto mb-12"
@@ -375,3 +376,11 @@ export default {
   },
 }
 </script>
+
+<style>
+  #logo {
+    height: 300px;
+    /* background-color: red; */
+  }
+
+</style>
