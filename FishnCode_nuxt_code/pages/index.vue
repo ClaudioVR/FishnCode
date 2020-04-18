@@ -215,7 +215,7 @@
 
         <v-row>
           <v-col
-            v-for="({ src, text, title }, i) in articles"
+            v-for="({ src, text, title, link }, i) in projects"
             :key="i"
             cols="12"
             md="4"
@@ -223,7 +223,7 @@
             <v-img
               :src="src"
               class="mb-4"
-              height="275"
+              height="285"
               max-width="100%"
             ></v-img>
 
@@ -240,8 +240,10 @@
             <v-btn
               class="ml-n4 font-weight-black"
               text
+              :href="link"
+              target="_blank"
             >
-              Continue Reading
+              Read more
             </v-btn>
           </v-col>
         </v-row>
@@ -339,28 +341,31 @@
 export default {
   data() {
     return {
-      articles: [
+      projects: [
           {
-            src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-            title: 'Mobile first & Responsive',
+            src: '/agentpay.png',
+            title: 'AgentPay',
             text: 'Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget tortor tempor, quis porta tellus dictum.',
+            link: 'https://agentpay.app/'
           },
           {
-            src: 'https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-            title: 'Think outside the box',
+            src: 'https://source.unsplash.com/H4uYCNkNLdM',
+            title: 'NegApp',
             text: 'Nam ut leo ipsum. Maecenas pretium aliquam feugiat. Aenean vel tempor est, vitae tincidunt risus. Sed sodales vestibulum nibh.',
+            link: ''
           },
           {
-            src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
-            title: 'Small changes, big difference',
+            src: 'https://source.unsplash.com/H4uYCNkNLdM',
+            title: 'Ongoing project',
             text: 'Vestibulum in dictum velit, in rhoncus nibh. Maecenas neque libero, interdum a dignissim in, aliquet vitae lectus. Phasellus lorem enim, luctus ut velit eget.',
+            link: ''
           },
         ],
         services: [
           {
-            icon: 'mdi-xml',
-            title: 'Low code, no code',
-            text: 'Smart use of reusable components allows us to do more with less. More time to focus on your business logic, and on how to get the best out of the applications we build.',
+            icon: 'mdi-telescope',
+            title: 'Innovative technologies',
+            text: 'We employ the very latest Javascript frameworks and libraries, and we are always on the lookout for the latest advances in web technologies in order to provide the best tools on the market.',
           },
           {
             icon: 'mdi-account-circle-outline',
@@ -368,10 +373,10 @@ export default {
             text: 'Users and user experience are at the very core of everything we do. Human centred design is paramount to providing the best possible digital solutions and applications that solve user requirements.',
           },
           {
-            icon: 'mdi-telescope',
-            title: 'Innovative technologies',
-            text: 'We employ the very latest Javascript frameworks and libraries, and we are always on the lookout for the latest advances in web technologies in order to provide the best tools on the market.',
-          },
+            icon: 'mdi-xml',
+            title: 'Low code, no code',
+            text: 'Smart use of reusable components allows us to do more with less. More time to focus on your business logic, and on how to get the best out of the applications we build.',
+          }
         ],
         languages: [
           ['Javascript', 'CSS3 - HTML5', '/javascript_logo.png'],
