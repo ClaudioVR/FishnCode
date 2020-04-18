@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="black">
     <section id="hero">
       <v-row no-gutters>
         <!-- <v-img
@@ -41,7 +41,7 @@
               </span>
               <br>
               <v-btn
-                class="align-self-end"
+                class="align-self-end mt-6"
                 fab
                 outlined
                 @click="$vuetify.goTo('#about-me')"
@@ -75,37 +75,42 @@
           class="mx-auto title font-weight-light mb-8"
           max-width="720"
         >
-          <p>I am a front-end developer with creative problem-solving skills looking for opportunities within a creative team focused on creating great user experiences.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur minima, labore tempore, quisquam fugit voluptate soluta aspernatur voluptatibus at sapiente enim deleniti possimus beatae magni architecto neque culpa, quia corrupti nulla vel dolorem? Nobis voluptate illo excepturi doloremque deleniti alias accusamus ducimus tenetur earum consequuntur, repellat magnam aperiam cumque dolorem?</p>
+          <p>Fish n Code offer cutting edge front-end solutions. From static websites, to single-page and full-stack progressive web applications. We create user-friendly interfaces which deliver the very best user experiences.</p>
+          <p>Fish n Code is based in Oslo, but is available for remote project work throughout the world.</p>
         </v-responsive>
 
         <v-avatar
-          class="elevation-12 mb-12"
+          class="elevation-12 mb-8"
           size="128"
         >
           <v-img src="/claudio.jpg"></v-img>
         </v-avatar>
+        <br>
+        <span class="headline font-weight-light">Claudio Rescigno</span>
+        <p class="font-weight-thin">Coder and founder</p>
 
         <div></div>
 
-        <!-- <v-btn
+        <v-btn
           color="grey"
-          href="https://vuetifyjs.com"
+          href="https://www.linkedin.com/in/claudio-rescigno-6b0531177/?originalSubdomain=no"
+          target="_blank"
           outlined
-          large
+          fab
         >
-          <span class="grey--text text--darken-1 font-weight-bold">
-            Vuetify Documentation
-          </span>
-        </v-btn> -->
+          <!-- <span class="grey--text text--darken-1 font-weight-bold text-capitalize">
+            Linked
+          </span> -->
+          <v-icon large>mdi-linkedin</v-icon>
+        </v-btn>
       </v-container>
 
       <div class="py-12"></div>
     </section>
 
     <section
-      id="features"
-      class="white grey--text"
+      id="services"
+      class="grey lighten-3 grey--text text--darken-2"
     >
       <div class="py-12"></div>
 
@@ -123,14 +128,13 @@
 
         <v-row>
           <v-col
-            v-for="({ icon, title, text }, i) in features"
+            v-for="({ icon, title, text }, i) in services"
             :key="i"
             cols="12"
             md="4"
           >
             <v-card
-              class="py-12 px-4"
-              color="grey lighten-5 grey--text"
+              class="py-12 px-4 grey lighten-5"
               flat
             >
               <div>
@@ -146,12 +150,12 @@
               </div>
 
               <v-card-title
-                class="justify-center font-weight-black text-uppercase grey--text"
+                class="justify-center font-weight-black text-uppercase grey--text text--darken-2"
                 v-text="title"
               ></v-card-title>
 
               <v-card-text
-                class="subtitle-1 grey--text"
+                class="subtitle-1 grey--text text--darken-2"
                 v-text="text"
               >
               </v-card-text>
@@ -163,7 +167,7 @@
       <div class="py-12"></div>
     </section>
 
-    <section id="stats">
+    <section id="languages">
       <v-parallax
         :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
         src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
@@ -171,7 +175,7 @@
         <v-container fill-height>
           <v-row class="mx-auto">
             <v-col
-              v-for="[value, title] of stats"
+              v-for="[value, title] of languages"
               :key="title"
               cols="12"
               md="3"
@@ -322,7 +326,9 @@
       height="100"
     >
       <div class="title font-weight-light grey--text text--lighten-1 text-center">
-        &copy; {{ (new Date()).getFullYear() }} — Vuetify, LLC — Made with 💜 by John Leider
+        &copy; {{ (new Date()).getFullYear() }} Fish n Code
+        <br>
+        <span class="caption">Based on a design by John Leider</span>
       </div>
     </v-footer>
   </div>
@@ -349,28 +355,28 @@ export default {
             text: 'Vestibulum in dictum velit, in rhoncus nibh. Maecenas neque libero, interdum a dignissim in, aliquet vitae lectus. Phasellus lorem enim, luctus ut velit eget.',
           },
         ],
-        features: [
+        services: [
           {
-            icon: 'mdi-account-group-outline',
-            title: 'Vibrant Community',
+            icon: 'mdi-xml',
+            title: 'Clean code',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam',
           },
           {
-            icon: 'mdi-update',
-            title: 'Frequent Updates',
+            icon: 'mdi-account-circle-outline',
+            title: 'UX Design',
             text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.',
           },
           {
-            icon: 'mdi-shield-outline',
-            title: 'Long-term Support',
+            icon: 'mdi-telescope',
+            title: 'Innovative technologies',
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam',
           },
         ],
-        stats: [
-          ['Javascript', 'Github Stars'],
-          ['Vue.js', 'Downloads/mo'],
-          ['Vuetify', 'Total Downloads'],
-          ['Amplify', 'Amazon Web Servies'],
+        languages: [
+          ['Javascript', 'CSS3 HTML5'],
+          ['Vue.js', 'Nuxt.js, Vuetify'],
+          ['Amplify', 'Amazon Web Services'],
+          ['UI/UX', 'UXQB Certified']
         ],
     }
   },
