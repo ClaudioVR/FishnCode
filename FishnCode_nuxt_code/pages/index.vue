@@ -75,7 +75,7 @@
           class="mx-auto title font-weight-light mb-8"
           max-width="720"
         >
-          <p>Fish n Code offer cutting edge front-end solutions. From static websites, to single-page and full-stack progressive web applications. We create user-friendly interfaces which deliver the very best user experiences.</p>
+          <p class="headline">Fish n Code offer cutting edge front-end solutions. <br> From simple static websites, to full-stack progressive web applications. We create user-friendly interfaces which deliver the very best user experiences.</p>
           <p>Fish n Code is based in Oslo, but is available for remote project work throughout the world.</p>
         </v-responsive>
 
@@ -110,7 +110,7 @@
 
     <section
       id="services"
-      class="grey lighten-3 grey--text text--darken-2"
+      class="grey--text text--lighten-2"
     >
       <div class="py-12"></div>
 
@@ -134,17 +134,19 @@
             md="4"
           >
             <v-card
-              class="py-12 px-4 grey lighten-5"
+              class="py-12 px-4 grey lighten-3"
               flat
             >
               <div>
                 <v-avatar
-                  color="primary"
+                  color="#030d24"
                   size="88"
                 >
                   <v-icon
                     large
                     v-text="icon"
+                    color="grey lighten-3"
+
                   ></v-icon>
                 </v-avatar>
               </div>
@@ -170,7 +172,7 @@
     <section id="languages">
       <v-parallax
         :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-        src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+        src="https://source.unsplash.com/p_wC_T2HUPk"
       >
         <v-container fill-height>
           <v-row class="mx-auto">
@@ -198,7 +200,7 @@
       </v-parallax>
     </section>
 
-    <section id="blog">
+    <section id="portfolio">
       <div class="py-12"></div>
 
       <v-container>
@@ -228,7 +230,7 @@
             ></v-img>
 
             <h3
-              class="font-weight-black mb-4 text-uppercase"
+              class="font-weight-black mb-4 text-capitalize"
               v-text="title"
             ></h3>
 
@@ -252,7 +254,7 @@
       <div class="py-12"></div>
     </section>
 
-    <v-sheet
+    <!-- <v-sheet
       id="contact"
       color="black"
       tag="section"
@@ -272,60 +274,15 @@
           <v-divider></v-divider>
         </v-responsive>
 
-        <v-theme-provider light>
-          <v-row>
-            <v-col cols="12">
-              <v-text-field
-                flat
-                label="Name*"
-                solo
-              ></v-text-field>
-            </v-col>
 
-            <v-col cols="12">
-              <v-text-field
-                flat
-                label="Email*"
-                solo
-              ></v-text-field>
-            </v-col>
-
-            <v-col cols="12">
-              <v-text-field
-                flat
-                label="Subject*"
-                solo
-              ></v-text-field>
-            </v-col>
-
-            <v-col cols="12">
-              <v-textarea
-                flat
-                label="Message*"
-                solo
-              ></v-textarea>
-            </v-col>
-
-            <v-col
-              class="mx-auto"
-              cols="auto"
-            >
-              <v-btn
-                color="white"
-                x-large
-              >
-                Submit
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-theme-provider>
       </v-container>
 
       <div class="py-12"></div>
-    </v-sheet>
+    </v-sheet> -->
+
     <v-footer
       class="justify-center"
-      color="#292929"
+      color="black"
       height="100"
     >
       <div class="title font-weight-light grey--text text--lighten-1 text-center">
@@ -345,19 +302,19 @@ export default {
           {
             src: '/agentpay.png',
             title: 'AgentPay',
-            text: 'Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. Sed ornare ligula eget tortor tempor, quis porta tellus dictum.',
+            text: 'A PWA accounts and finance app for letting agencies. Dynamic dashbaord and live transaction functionality.',
             link: 'https://agentpay.app/'
           },
           {
             src: 'https://source.unsplash.com/H4uYCNkNLdM',
-            title: 'NegApp',
-            text: 'Nam ut leo ipsum. Maecenas pretium aliquam feugiat. Aenean vel tempor est, vitae tincidunt risus. Sed sodales vestibulum nibh.',
+            title: 'Ongoing project',
+            text: 'Currently user testing a multi-functional PWA for the lettings industry.',
             link: ''
           },
           {
             src: 'https://source.unsplash.com/H4uYCNkNLdM',
             title: 'Ongoing project',
-            text: 'Vestibulum in dictum velit, in rhoncus nibh. Maecenas neque libero, interdum a dignissim in, aliquet vitae lectus. Phasellus lorem enim, luctus ut velit eget.',
+            text: 'Working on a AWS Amplify run PWA, using Lambda, DynamoDB and GraphQL.',
             link: ''
           },
         ],
@@ -365,17 +322,17 @@ export default {
           {
             icon: 'mdi-telescope',
             title: 'Innovative technologies',
-            text: 'We employ the very latest Javascript frameworks and libraries, and we are always on the lookout for the latest advances in web technologies in order to provide the best tools on the market.',
+            text: 'We employ the very latest Javascript frameworks and libraries in order to provide the best tools solutions available on the market.',
           },
           {
             icon: 'mdi-account-circle-outline',
             title: 'UX Design',
-            text: 'Users and user experience are at the very core of everything we do. Human centred design is paramount to providing the best possible digital solutions and applications that solve user requirements.',
+            text: 'Users are at the core of everything we do. Human centred design is paramount to providing the best possible digital solutions that solve user requirements.',
           },
           {
             icon: 'mdi-xml',
             title: 'Low code, no code',
-            text: 'Smart use of reusable components allows us to do more with less. More time to focus on your business logic, and on how to get the best out of the applications we build.',
+            text: 'Reusable components allows us to do more with less. More time to focus on your business logic in order to get the best out of the applications we build.',
           }
         ],
         languages: [
