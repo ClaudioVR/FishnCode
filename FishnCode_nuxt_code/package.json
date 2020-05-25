@@ -1,7 +1,7 @@
 {
-  "name": "test-portfolio-page",
+  "name": "Fish-n-Code",
   "version": "1.0.0",
-  "description": "My superb Nuxt.js project",
+  "description": "A Nuxt.js static website for my company.",
   "author": "Claudio Rescigno",
   "private": true,
   "scripts": {
