@@ -22,13 +22,6 @@
               class="white--text text-center pa-0"
               cols="12"
             >
-              <!-- <span
-                :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
-                class="font-weight-black"
-              >
-                Fish n Code
-              </span> -->
-
               <v-img id="logo" class="pa-0" src="/fishncodelogo.svg">
 
               </v-img>
@@ -59,53 +52,50 @@
     <section id="about-me">
       <div class="py-12"></div>
 
-      <v-container class="text-center">
-        <h2 class="display-2 font-weight-bold mb-3">ABOUT US</h2>
+      <v-container class="">
+        <h2 class="text-center display-2 font-weight-bold mb-3">ABOUT US</h2>
 
         <v-responsive
-          class="mx-auto mb-8"
+          class="mx-auto mb-10"
           width="56"
         >
           <v-divider class="mb-1"></v-divider>
-
           <v-divider></v-divider>
         </v-responsive>
 
-        <v-responsive
-          class="mx-auto title font-weight-light mb-8"
-          max-width="720"
-        >
-          <p class="headline">Fish n Code offer cutting edge front-end solutions. <br> From simple static websites, to full-stack progressive web applications. We create user-friendly interfaces which deliver the very best user experiences.</p>
-          <p>Fish n Code is based in Oslo, but is available for remote project work throughout the world.</p>
-        </v-responsive>
+        <v-row class="align-center">
+          <v-col class="d-flex flex-column align-center" col="12" sm="3">
+            <v-avatar
+              class="elevation-12 mb-0"
+              size="128"
+            >
+              <v-img src="/claudio.jpg"></v-img>
+            </v-avatar>
+            <br>
+            <span class="headline font-weight-light">Claudio Rescigno</span>
+            <p class="font-weight-thin">Coder and founder</p>
 
-        <v-avatar
-          class="elevation-12 mb-8"
-          size="128"
-        >
-          <v-img src="/claudio.jpg"></v-img>
-        </v-avatar>
-        <br>
-        <span class="headline font-weight-light">Claudio Rescigno</span>
-        <p class="font-weight-thin">Coder and founder</p>
+            <div></div>
 
-        <div></div>
-
-        <v-btn
-          color="grey"
-          href="https://www.linkedin.com/in/claudio-rescigno-6b0531177/?originalSubdomain=no"
-          target="_blank"
-          outlined
-          fab
-        >
-          <!-- <span class="grey--text text--darken-1 font-weight-bold text-capitalize">
-            Linked
-          </span> -->
-          <v-icon large>mdi-linkedin</v-icon>
-        </v-btn>
+            <v-btn
+              color="grey"
+              href="https://www.linkedin.com/in/claudio-rescigno-6b0531177/?originalSubdomain=no"
+              target="_blank"
+              outlined
+              fab
+            >
+              <v-icon large>mdi-linkedin</v-icon>
+            </v-btn>
+          </v-col>
+          <v-col cols="12" sm="9">
+            <p class="display-1 font-weight-light">Fish n Code offer cutting edge front-end solutions.
+            <p class="title font-weight-light">From simple static websites, to full-stack progressive web applications. We create user-friendly interfaces which deliver the very best user experiences.</p>
+            <p>Fish n Code is based in Oslo, Norway and available for remote projects worldwide.</p>
+          </v-col>
+        </v-row>
       </v-container>
 
-      <div class="py-12"></div>
+      <div class="py-3"></div>
     </section>
 
     <section
@@ -115,7 +105,7 @@
       <div class="py-12"></div>
 
       <v-container class="text-center">
-        <h2 class="display-2 font-weight-bold mb-3 text-uppercase">Our services</h2>
+        <h2 class="display-2 font-weight-bold mb-3 text-uppercase white--text">Our services</h2>
 
         <v-responsive
           class="mx-auto mb-12"
@@ -133,35 +123,42 @@
             cols="12"
             md="4"
           >
-            <v-card
-              class="py-12 px-4 grey lighten-3"
-              flat
-            >
-              <div>
-                <v-avatar
-                  color="#030d24"
-                  size="88"
-                >
-                  <v-icon
-                    large
-                    v-text="icon"
-                    color="grey lighten-3"
-
-                  ></v-icon>
-                </v-avatar>
-              </div>
-
-              <v-card-title
-                class="justify-center font-weight-black text-uppercase grey--text text--darken-2"
-                v-text="title"
-              ></v-card-title>
-
-              <v-card-text
-                class="subtitle-1 grey--text text--darken-2"
-                v-text="text"
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                :height="hover ? 355 : 205"
+                class="py-12 px-4 overflow"
+                :color="hover ? '#22f4ce' : '#004060' "
+                flat
               >
-              </v-card-text>
-            </v-card>
+                <div>
+                  <v-avatar
+                    color="#000"
+                    size="88"
+                  >
+                    <v-icon
+                      large
+                      v-text="icon"
+                      color="grey lighten-3"
+
+                    ></v-icon>
+                  </v-avatar>
+                </div>
+
+                <v-card-title
+                  class="justify-center font-weight-black text-uppercase"
+                  :class="hover ? 'grey--text text--darken-4' : 'white--text' "
+                  v-text="title"
+                ></v-card-title>
+
+                <v-card-text
+                  class="subtitle-1"
+                  :class="hover ? 'grey--text text--darken-3' : 'white--text' "
+
+                  v-text="text"
+                >
+                </v-card-text>
+              </v-card>
+            </v-hover>
           </v-col>
         </v-row>
       </v-container>
@@ -171,7 +168,7 @@
 
     <section id="languages">
       <v-parallax
-        :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
+        :height="$vuetify.breakpoint.smAndDown ? 900 : 500"
         src="https://source.unsplash.com/p_wC_T2HUPk"
       >
         <v-container fill-height>
@@ -302,7 +299,7 @@ export default {
           {
             src: '/agentpay.png',
             title: 'AgentPay',
-            text: 'A PWA accounts and finance app for letting agencies. Dynamic dashbaord and live transaction functionality.',
+            text: 'A commercial application for the lettings and sales industry. The app includes a dynamic and responsive dashbaord, with full overview of payments and finances as well as a live banking service.',
             link: 'https://agentpay.app/'
           },
           {
@@ -322,7 +319,7 @@ export default {
           {
             icon: 'mdi-telescope',
             title: 'Innovative technologies',
-            text: 'We employ the very latest Javascript frameworks and libraries in order to provide the best tools solutions available on the market.',
+            text: 'We employ the very latest Javascript frameworks and libraries to provide you with the best solutions available on the market.',
           },
           {
             icon: 'mdi-account-circle-outline',
@@ -352,4 +349,8 @@ export default {
     /* background-color: red; */
   }
 
+  .overflow {
+    overflow: hidden;
+    transition: all .3s ease;
+  }
 </style>
